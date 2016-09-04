@@ -1,0 +1,29 @@
+
+.my-controller {
+  border: 1px solid grey;
+  padding: 5px;
+  margin: 3px;
+  font-size: 40 px;
+}
+.my-controller small {
+ 
+  font-size: 40 px;
+  color: white;
+}
+.other-controller {
+  border: 1px solid white
+  ;
+  padding: 5px;
+  margin: 3px;
+}
+.other-controller small {
+  color: white;
+}
+.third-controller {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 3px;
+}
+.third-controller small {
+  color: white;
+}
