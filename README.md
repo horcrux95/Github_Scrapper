@@ -10,4 +10,10 @@ Features
 3.Check any user profile with list of repos/followers etc.
 
 4.Search repos on language and stars parameter on any criteria across github.
-<img src="" width="250" height="300"
+
+
+<img src="https://github.com/frontwin/Github_Scrapper/blob/master/Capture1.JPG" width="550" height="400">
+
+<img src="https://github.com/frontwin/Github_Scrapper/blob/master/Capture3.JPG" width="550" height="400">
+
+<img src="https://github.com/frontwin/Github_Scrapper/blob/master/Capture.JPG" width="550" height="400">
