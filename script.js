@@ -24,8 +24,10 @@ $scope.userData="";
 
   $scope.add = function(){
 
-if($scope.userData==""){
+if($scope.userData=="" || $scope.userData.items.length==0){
+ 
  $scope.flag="No data available";
+ $scope.meals="";
 }
 else
     {
@@ -60,6 +62,14 @@ $scope.checkmeal= function(){
     return false;
 }
 
+$scope.check = function(){
+  console.log("in check");
+
+  if($scope.language=="" && $scope.stars=="")
+    return true;
+  else
+    return false;
+}
 
 $scope.refresh = function() {
 
@@ -74,6 +84,9 @@ if($scope.stars!="" && $scope.language!=""){
 
         .error( function(error){
          alert("YOU HAVE ENTERED WRONG Language or stars");
+         $scope.userData="";
+          $scope.add();    
+
         })
     ;}
 
@@ -82,11 +95,14 @@ if($scope.stars!="" && $scope.language==""){
     return $http.get("https://api.github.com/search/repositories?q=stars:"+$scope.map[$scope.choice]+$scope.stars+"&sort=stars&order=desc")
     .success(function(response) {
         $scope.userData = response;
-      $scope.add();
+        $scope.add();
          })
 
     .error(function(error){
          alert("YOU HAVE ENTERED WRONG STARS");
+$scope.userData="";
+          $scope.add();    
+
  })
  
     ;}
@@ -100,6 +116,9 @@ if($scope.stars!="" && $scope.language==""){
          })
       .error(function(error){
          alert("YOU HAVE ENTERED WRONG Language");
+$scope.userData="";
+          $scope.add();    
+
  })
     ;}
   };
